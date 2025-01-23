@@ -12,15 +12,25 @@ You can directly use the appropriate pre-built executable for your operating sys
 - **macOS**: [tetris-macos](./tetris/tetris-macos)
 - **Windows**: [tetris-windows.exe](./tetris/tetris-windows.exe)
 
+Once you have the executable for your platform, follow these steps:
 
-Make sure you have Go installed. You can download and install Go from the official website:
+1. Open a terminal or command prompt.
+2. Navigate to the directory where the executable is located.
+3. Run the following command:
 
-- [Install Go](https://golang.org/dl/)
+   ```bash
+   ./tetris-linux   # for Linux
+   ./tetris-macos   # for macOS
+   tetris-windows.exe  # for Windows
+### If the executables don't work
+You can download and install Go from the official website:
 
-### Cloning the Repository
+- [Install Go](https://go.dev/doc/install)
 
-Clone this repository to your local machine:
-
-```bash
-git clone https://github.com/your-username/tetris-simulator.git
-cd tetris-simulator
+Then, build the project:
+  ```bash
+   cd tetris && go build -o tetris
+  ```
+You should now have an executable `tetris`
+## Testing with automated script
+You can test with the automated script by editing line 15 `ENTRY_POINT` of [sample_test](./tests/sample_test.py) to your respective executable.
