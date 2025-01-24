@@ -22,6 +22,7 @@ Once you have the executable for your platform, follow these steps:
    ./tetris-linux   # for Linux
    ./tetris-macos   # for macOS
    tetris-windows.exe  # for Windows
+Make sure your inputs are valid characters and offsets separated by a comma e.g. Q3,L5,I0
 ### If the executables don't work
 You can download and install Go from the official website:
 

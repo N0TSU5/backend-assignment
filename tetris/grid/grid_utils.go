@@ -6,10 +6,15 @@ import (
 	b "tetris/block"
 )
 
+/*
+FindDropRow calculates the row where a block should land on the grid, ensuring proper collision with existing blocks.
+It determines the lowest sub-blocks in each column of the block and iterates through the corresponding columns in the grid to find the first collision point.
+If no collisions are detected, the block is placed at the lowest possible position in the grid.
+*/
 func findDropRow(grid Grid, block b.Block, offset int) int {
 	dropRow := math.MaxInt
 
-	// In a block, the sub-blocks that will collide first will be the lowest sub-blocks in each column.
+	// In a block, the sub-blocks that will collide first will be the lowest sub-blocks in each vertical column.
 	// So, here, we find the first row which collides with one of those lowest blocks and return.
 	for _, point := range block.LowestHeightPerColumn() {
 		colIdx := point[1] + offset

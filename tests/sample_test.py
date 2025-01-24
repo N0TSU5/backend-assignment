@@ -38,7 +38,7 @@ def run_test(test_case: TestCase):
 if __name__ == "__main__":
     test_cases = [
         TestCase("simple test", b"Q0", 2),
-        TestCase("Many blocks test", ",".join(["Q0"] * 50).encode("utf-8"), 100),
+        TestCase("Many blocks test", ",".join(["Q0"] * 5000).encode("utf-8"), 10000),
     ]
     for test_case in test_cases:
         run_test(test_case)

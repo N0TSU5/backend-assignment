@@ -1,6 +1,8 @@
 package grid
 
-import "tetris/block"
+// Package grid provides functionality for managing and interacting with the game grid in a Tetris-like system.
+
+import b "tetris/block"
 
 const GRID_WIDTH = 10
 
@@ -30,7 +32,7 @@ Returns:
 - []int: Rows populated by the block.
 - error: An error if an issue occurs.
 */
-func DropBlock(grid Grid, block block.Block, offset int) (*Grid, [2]int, error) {
+func DropBlock(grid Grid, block b.Block, offset int) (*Grid, [2]int, error) {
 	dropRow := findDropRow(grid, block, offset)
 	return dropBlockAtRow(grid, block, offset, dropRow)
 }
